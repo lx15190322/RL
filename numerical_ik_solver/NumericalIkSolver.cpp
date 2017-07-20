@@ -13,6 +13,9 @@
 #include "gflags/gflags.h"
 #include "glog/logging.h"
 
+#include "ceres/dynamic_autodiff_cost_function.h"
+#include "ceres/dynamic_numeric_diff_cost_function.h"
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -31,6 +34,7 @@ using std::string;
 using std::abs;
 
 using ceres::NumericDiffCostFunction;
+using ceres::DynamicNumericDiffCostFunction;
 using ceres::AutoDiffCostFunction;
 using ceres::CENTRAL;
 using ceres::FORWARD;
@@ -369,8 +373,14 @@ int CNumericalIkSolver::RunSolver(Vector3d MatTEndEffector, Vector3d MatTElbow, 
     
     //NumericDiffCostFunction: other choices are AutoDiffCostFunction, AnalysisDiffCostFunction, haven't tried so far.
     //set dimension of residuals to 2 to add elbow cost, doesn't work well so far
-        CostFunction * cost_function1 = new NumericDiffCostFunction <CQuadCostFunctor, FORWARD, 1, 6>( //FORWARD, // TODO. Problem, JOINT_NUM is not flexible
-            new CQuadCostFunctor(dMainW, dCoupledW, MatTEndEffector, MatTElbow));
+        DynamicNumericDiffCostFunction <CQuadCostFunctor,FORWARD> * cost_function1 = new DynamicNumericDiffCostFunction <CQuadCostFunctor,FORWARD>( new CQuadCostFunctor(dMainW, dCoupledW, MatTEndEffector, MatTElbow));
+        
+        //<CQuadCostFunctor, FORWARD, 1, 6>
+        
+        cost_function1 -> AddParameterBlock(m_iJointNum);
+        cost_function1 -> SetNumResiduals(1);
+        
+        
     
         //m_iJointNum
     

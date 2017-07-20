@@ -6,17 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/NumericalIkSolver.cpp
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/NumericalIkSolver.cpp
 NumericalIkSolver.h
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/NumericalIkSolver.h
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/NumericalIkSolver.h
 Eigen/Dense
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/Eigen/Dense
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/Eigen/Dense
 ceres/ceres.h
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/ceres/ceres.h
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/ceres/ceres.h
 gflags/gflags.h
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/gflags/gflags.h
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/gflags/gflags.h
 glog/logging.h
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/glog/logging.h
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/glog/logging.h
+ceres/dynamic_autodiff_cost_function.h
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/ceres/dynamic_autodiff_cost_function.h
+ceres/dynamic_numeric_diff_cost_function.h
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/ceres/dynamic_numeric_diff_cost_function.h
 iostream
 -
 vector
@@ -28,7 +32,7 @@ cmath
 assert.h
 -
 
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/NumericalIkSolver.h
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/NumericalIkSolver.h
 vector
 -
 iostream
@@ -36,19 +40,19 @@ iostream
 string
 -
 Eigen/Dense
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/Eigen/Dense
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/Eigen/Dense
 
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/testrunner.cpp
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/testrunner.cpp
 NumericalIkSolver.h
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/NumericalIkSolver.h
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/NumericalIkSolver.h
 Eigen/Dense
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/Eigen/Dense
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/Eigen/Dense
 ceres/ceres.h
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/ceres/ceres.h
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/ceres/ceres.h
 gflags/gflags.h
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/gflags/gflags.h
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/gflags/gflags.h
 glog/logging.h
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/glog/logging.h
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/glog/logging.h
 iostream
 -
 vector

@@ -123,7 +123,7 @@ class CNumericalIkSolver
         int GenerateRotationMatrix(Eigen::Matrix3d &MatRotation, Eigen::Vector3d MatAxis, double dAngle) const;
         
         template <typename T>
-        bool operator()(const T * const params, T * residuals) const
+        bool operator()(T const * const * params, T * residuals) const
         {
             int iRSize = m_vRobotArm.size() - 1;
             Eigen::VectorXd MatAngles(iRSize + 1);
@@ -135,7 +135,7 @@ class CNumericalIkSolver
             
             for (int i = 1; i <= iRSize; i++) //Generating Eigen vector
             {
-                MatAngles(i) = params[i-1];
+                MatAngles(i) = params[0][i-1];
             }
 
             ForwardKinematics(MatAngles); //Calling FK, hidden function doesn't matter when doing numerical diff, but won't work when doing analytical optimization.

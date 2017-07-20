@@ -43,10 +43,10 @@ RM = /opt/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints"
+CMAKE_SOURCE_DIR = "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints"
+CMAKE_BINARY_DIR = "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/testrunner.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/testrunner.dir/flags.make
 
 CMakeFiles/testrunner.dir/testrunner.cpp.o: CMakeFiles/testrunner.dir/flags.make
 CMakeFiles/testrunner.dir/testrunner.cpp.o: testrunner.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/testrunner.dir/testrunner.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testrunner.dir/testrunner.cpp.o -c "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/testrunner.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/testrunner.dir/testrunner.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testrunner.dir/testrunner.cpp.o -c "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/testrunner.cpp"
 
 CMakeFiles/testrunner.dir/testrunner.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testrunner.dir/testrunner.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/testrunner.cpp" > CMakeFiles/testrunner.dir/testrunner.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/testrunner.cpp" > CMakeFiles/testrunner.dir/testrunner.cpp.i
 
 CMakeFiles/testrunner.dir/testrunner.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testrunner.dir/testrunner.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/testrunner.cpp" -o CMakeFiles/testrunner.dir/testrunner.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/testrunner.cpp" -o CMakeFiles/testrunner.dir/testrunner.cpp.s
 
 CMakeFiles/testrunner.dir/testrunner.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/testrunner.dir/testrunner.cpp.o.provides.build: CMakeFiles/testrunner
 
 CMakeFiles/testrunner.dir/NumericalIkSolver.cpp.o: CMakeFiles/testrunner.dir/flags.make
 CMakeFiles/testrunner.dir/NumericalIkSolver.cpp.o: NumericalIkSolver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/testrunner.dir/NumericalIkSolver.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testrunner.dir/NumericalIkSolver.cpp.o -c "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/NumericalIkSolver.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/testrunner.dir/NumericalIkSolver.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testrunner.dir/NumericalIkSolver.cpp.o -c "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/NumericalIkSolver.cpp"
 
 CMakeFiles/testrunner.dir/NumericalIkSolver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testrunner.dir/NumericalIkSolver.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/NumericalIkSolver.cpp" > CMakeFiles/testrunner.dir/NumericalIkSolver.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/NumericalIkSolver.cpp" > CMakeFiles/testrunner.dir/NumericalIkSolver.cpp.i
 
 CMakeFiles/testrunner.dir/NumericalIkSolver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testrunner.dir/NumericalIkSolver.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/NumericalIkSolver.cpp" -o CMakeFiles/testrunner.dir/NumericalIkSolver.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/NumericalIkSolver.cpp" -o CMakeFiles/testrunner.dir/NumericalIkSolver.cpp.s
 
 CMakeFiles/testrunner.dir/NumericalIkSolver.cpp.o.requires:
 
@@ -134,7 +134,7 @@ testrunner: /usr/local/lib/libsuitesparseconfig.dylib
 testrunner: /usr/local/lib/libmetis.dylib
 testrunner: /usr/local/lib/libcxsparse.dylib
 testrunner: CMakeFiles/testrunner.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable testrunner"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable testrunner"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/testrunner.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -152,6 +152,6 @@ CMakeFiles/testrunner.dir/clean:
 .PHONY : CMakeFiles/testrunner.dir/clean
 
 CMakeFiles/testrunner.dir/depend:
-	cd "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints" "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints" "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints" "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints" "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/CMakeFiles/testrunner.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib" "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib" "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib" "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib" "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/CMakeFiles/testrunner.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/testrunner.dir/depend
 

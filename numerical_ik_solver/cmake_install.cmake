@@ -1,4 +1,4 @@
-# Install script for directory: /Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints
+# Install script for directory: /Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02-with-constraints/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
