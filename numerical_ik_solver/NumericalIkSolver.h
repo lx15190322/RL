@@ -108,6 +108,13 @@ class CNumericalIkSolver
     
     //TODO add a loss function, or maybe loss functor class operator, design a kind of loss functor
     
+    typedef double(*MyObjectivePtr)(std::vector<CNumericalIkSolver::Joint>, Eigen::MatrixXd);
+    
+    static MyObjectivePtr Obj;
+    
+    typedef double(*MyConstraintPtr)(std::vector<CNumericalIkSolver::Joint>, Eigen::MatrixXd);
+    
+    static MyConstraintPtr Constraint;
 
 	class CQuadCostFunctor
     {
@@ -145,9 +152,13 @@ class CNumericalIkSolver
             
             m_dCost = MatDiffEnd.dot(MatDiffEnd.transpose());
 //            m_dCoupledCost = MatDiffElbow.dot(MatDiffElbow.transpose());
-            residuals[0] = dW1_ * m_dCost;
+//            residuals[0] = dW1_ * m_dCost;
+            
+            residuals[0] = dW1_ * Obj(m_vRobotArm, MatTEff_);
+            residuals[1] = dW2_ * (params[0][m_iJointNum] - Constraint(m_vRobotArm, MatTEff_));
 //            residuals[1] = dW2_ * m_dCoupledCost;
             
+//            std::cout<<residuals[0]<<"!!"<<residuals[1]<<std::endl;
 //            m_bFlag = Satisfied(params);
             m_bFlag = true;
             
@@ -184,10 +195,10 @@ class CNumericalIkSolver
     
 //    virtual int myConstraint();
 //    void AddConstraintBlock();
-    typedef double(*MyConstraintPtr)(std::vector<CNumericalIkSolver::Joint>, Eigen::MatrixXd);
+//    typedef double(*MyConstraintPtr)(std::vector<CNumericalIkSolver::Joint>, Eigen::MatrixXd);
     
     
-    int RunSolver(Eigen::Vector3d MatTEndEffector, Eigen::Vector3d MatTElbow, double dMainW, double dCoupledW, MyConstraintPtr pConstraint = NULL); // eint //const Eigen::Vector3d MatTEndEffector, const Eigen::Vector3d MatTElbow // T &inAngle
+    int RunSolver(Eigen::Vector3d MatTEndEffector, Eigen::Vector3d MatTElbow, double dMainW, double dCoupledW, MyConstraintPtr pConstraint = NULL, MyObjectivePtr pObjective = NULL); // eint //const Eigen::Vector3d MatTEndEffector, const Eigen::Vector3d MatTElbow // T &inAngle
     
     int GetRobotParams(std::vector<Joint> & vRobot);
     

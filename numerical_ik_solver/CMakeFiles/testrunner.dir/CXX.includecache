@@ -6,21 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/NumericalIkSolver.cpp
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.3-with-constraints-dynamiclib-costfunptr/NumericalIkSolver.cpp
 NumericalIkSolver.h
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/NumericalIkSolver.h
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.3-with-constraints-dynamiclib-costfunptr/NumericalIkSolver.h
 Eigen/Dense
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/Eigen/Dense
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.3-with-constraints-dynamiclib-costfunptr/Eigen/Dense
 ceres/ceres.h
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/ceres/ceres.h
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.3-with-constraints-dynamiclib-costfunptr/ceres/ceres.h
 gflags/gflags.h
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/gflags/gflags.h
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.3-with-constraints-dynamiclib-costfunptr/gflags/gflags.h
 glog/logging.h
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/glog/logging.h
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.3-with-constraints-dynamiclib-costfunptr/glog/logging.h
 ceres/dynamic_autodiff_cost_function.h
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/ceres/dynamic_autodiff_cost_function.h
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.3-with-constraints-dynamiclib-costfunptr/ceres/dynamic_autodiff_cost_function.h
 ceres/dynamic_numeric_diff_cost_function.h
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/ceres/dynamic_numeric_diff_cost_function.h
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.3-with-constraints-dynamiclib-costfunptr/ceres/dynamic_numeric_diff_cost_function.h
 iostream
 -
 vector
@@ -32,7 +32,7 @@ cmath
 assert.h
 -
 
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/NumericalIkSolver.h
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.3-with-constraints-dynamiclib-costfunptr/NumericalIkSolver.h
 vector
 -
 iostream
@@ -40,19 +40,19 @@ iostream
 string
 -
 Eigen/Dense
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/Eigen/Dense
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.3-with-constraints-dynamiclib-costfunptr/Eigen/Dense
 
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/testrunner.cpp
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.3-with-constraints-dynamiclib-costfunptr/testrunner.cpp
 NumericalIkSolver.h
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/NumericalIkSolver.h
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.3-with-constraints-dynamiclib-costfunptr/NumericalIkSolver.h
 Eigen/Dense
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/Eigen/Dense
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.3-with-constraints-dynamiclib-costfunptr/Eigen/Dense
 ceres/ceres.h
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/ceres/ceres.h
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.3-with-constraints-dynamiclib-costfunptr/ceres/ceres.h
 gflags/gflags.h
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/gflags/gflags.h
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.3-with-constraints-dynamiclib-costfunptr/gflags/gflags.h
 glog/logging.h
-/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.2-with-constraints-dynamiclib/glog/logging.h
+/Users/xuanliu/Documents/Ewaybot work/code/iksolver-v02.3-with-constraints-dynamiclib-costfunptr/glog/logging.h
 iostream
 -
 vector

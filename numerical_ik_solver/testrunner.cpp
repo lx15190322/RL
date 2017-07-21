@@ -42,6 +42,20 @@ double testconstraint(std::vector<CNumericalIkSolver::Joint> robot, Eigen::Matri
     return dDistance;
 }
 
+double obj(std::vector<CNumericalIkSolver::Joint> robot, Eigen::MatrixXd m_MatTargetEndEffector)
+{
+    double mycost;
+    
+    Eigen::Vector3d MatDiffEnd;
+    
+    MatDiffEnd = m_MatTargetEndEffector - robot[6].MatEndEffector;
+    
+    mycost = MatDiffEnd.dot(MatDiffEnd.transpose());
+    
+    return mycost;
+}
+
+
 int main(int argc, char** argv)
 {
     //test
@@ -54,11 +68,11 @@ int main(int argc, char** argv)
     Telbow << 0, 1.0, -1.8; //elbow, temporarily doesn't work when causing the local minima
     
     CNumericalIkSolver::MyConstraintPtr p = testconstraint;
-    
+    CNumericalIkSolver::MyObjectivePtr o = obj;
     
     CNumericalIkSolver example;
     example.InitRobot();
-    example.RunSolver(Teff, Telbow, 1.0, 0.0, p);
+    example.RunSolver(Teff, Telbow, 1.0, 1.0, p, o);
     
     
     

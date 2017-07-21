@@ -67,6 +67,9 @@ double * CNumericalIkSolver::m_dAngles;
 
 vector<CNumericalIkSolver::Joint> CNumericalIkSolver::m_vRobotArm;
 
+CNumericalIkSolver::MyObjectivePtr CNumericalIkSolver::Obj;
+CNumericalIkSolver::MyConstraintPtr CNumericalIkSolver::Constraint;
+
 
 double CNumericalIkSolver::DefaultConstraint()
 {
@@ -212,7 +215,7 @@ int CNumericalIkSolver::InitRobot(int iArmFlag) //need OS params, change to loop
     
     //angles
     m_iJointNum = m_vRobotArm.size() - 1;
-    m_dAngles = (double *)malloc(sizeof(double) * m_iJointNum);
+    m_dAngles = (double *)malloc(sizeof(double) * m_iJointNum + 1);
     
     CNumericalIkSolver::m_dCostTolerance = 0.00001;
     CNumericalIkSolver::m_dConstraintTolerance = 0.005;
@@ -330,12 +333,15 @@ int CNumericalIkSolver::Normalization()
 }
 
 
-int CNumericalIkSolver::RunSolver(Vector3d MatTEndEffector, Vector3d MatTElbow, double dMainW, double dCoupledW, MyConstraintPtr pConstraint)
+int CNumericalIkSolver::RunSolver(Vector3d MatTEndEffector, Vector3d MatTElbow, double dMainW, double dCoupledW, MyConstraintPtr pConstraint, MyObjectivePtr pObjective)
 {
     assert(m_iInitFlag == 0);//check whether the robot model is already initiated
     
     if (m_iInitFlag == 0)
         return FAIL;
+    
+    Obj = pObjective;
+    Constraint = pConstraint;
     
     m_MatTargetEndEffector = MatTEndEffector;
     m_MatTargetElbow = MatTElbow;
@@ -357,7 +363,8 @@ int CNumericalIkSolver::RunSolver(Vector3d MatTEndEffector, Vector3d MatTElbow, 
         {
             m_dAngles[i] = m_vRobotArm[i+1].dLowBound + (m_vRobotArm[i+1].dUpBound - m_vRobotArm[i+1].dLowBound) * ((double) rand() / (RAND_MAX));
         }
-    
+        
+        m_dAngles[m_iJointNum] = pObjective(m_vRobotArm, m_MatTargetEndEffector);//constraint
     //      Prob init
         Problem problem;
     
@@ -377,8 +384,9 @@ int CNumericalIkSolver::RunSolver(Vector3d MatTEndEffector, Vector3d MatTElbow, 
         
         //<CQuadCostFunctor, FORWARD, 1, 6>
         
-        cost_function1 -> AddParameterBlock(m_iJointNum);
-        cost_function1 -> SetNumResiduals(1);
+        cost_function1 -> AddParameterBlock(m_iJointNum+1);
+//        cost_function1 -> AddParameterBlock(1);
+        cost_function1 -> SetNumResiduals(2);
         
         
     
@@ -395,6 +403,11 @@ int CNumericalIkSolver::RunSolver(Vector3d MatTEndEffector, Vector3d MatTElbow, 
             problem.SetParameterLowerBound(m_dAngles,j,m_vRobotArm[j+1].dLowBound);
             problem.SetParameterUpperBound(m_dAngles,j,m_vRobotArm[j+1].dUpBound);
         }
+        
+        problem.SetParameterUpperBound(m_dAngles, m_iJointNum, m_dConstraintTolerance);//constraint
+        
+        
+        
     //      options setting
         Solver::Options options;
     
@@ -433,7 +446,7 @@ int CNumericalIkSolver::RunSolver(Vector3d MatTEndEffector, Vector3d MatTElbow, 
             dConstraintError = DefaultConstraint();
         }
     
-        if (dConstraintError <= m_dConstraintTolerance)
+        if ( m_dAngles[m_iJointNum] - Constraint(m_vRobotArm, m_MatTargetEndEffector) >= -0.001 ) //dConstraintError
         {
             Normalization();
 
